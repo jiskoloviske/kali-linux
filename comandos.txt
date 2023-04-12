@@ -1,0 +1,267 @@
+Botão do meio do mouse cola textos.
+Sempre dar preferencia para arquivos TAR.GZ porque ja vem com as permissões
+shift + g vai no final do arquivo com o "vim"
+remover bloqueio de tela por inatividade (opções de energia)
+clear -> limpa a tela
+exit -> sai do usuario atual
+
+Comando uteis
+  apt install -f -> Corrigir problemas de instalação
+  curl ifconfig-me -> Ve o ip externo.
+  env -> variaveis de ambiente
+  export nome_variavel=valor -> cria uma variavel de ambiente temporaria 
+  unset nome_varivael -> remove variaveis criadas
+  man nome_comando -> manual dos comandos
+  info nome_comando -> manual com mais informações
+  less nome_arquivo_texto -> leitor de arquivos texto
+  whoami -> saber qual usuario estou
+  whereis nome_comando -> saber onde o comando esta localizado
+  whatis nome_comando -> fala o que o comando faz
+  locate nome_do_programa_ou_arquivo -> busca um programa ou arquivo no sistema
+  sudo updatedb -> atualiza o banco de dados para localizar mais arquivos
+
+Visualizar arquviso 
+  wc arquivo.txt -> Mostra numero de bits, numero de linhas, numero de palavra
+  wc -L -> Maximo de caracteres em uma linha
+  more arquivo.txt -> ler o arquivo
+  cat arquivo.txt -> mostra o TEXTO todo e conocatena varias textos 
+  car -n -> mostra o numero de linhas
+  head -> ver so as 10 primeiras linhas do arquivo
+  head -n 5 -> mostra so as 5 primeiras linhas
+  tail -> mostra as 10 ultimas linhas do arquivo
+  tail -n 5 -> mostra as 5 ultimas linhas
+  Funções do Less
+    less nome_arquivo_texto
+    seta pra cima e pra baixo move o texto
+    ? alguma_pesquisa -> Pesquisar conteudo dentro do texto do final pro começo
+    / alguma_pesquisa -> Pesquisar conteudo dentro do texto do começo pro final
+      n -> proximo da busca
+      shift + n -> busca pra atras
+    spaço -> pula uma paginas
+    b -> volta uma pagina
+    g -> volta pro começo
+    shift + g -> vai para final
+    q -> sai do less
+    v -> abre o editor
+    ctrl + l -> redezenha a tela
+    h -> ajuda
+    !ls -> executa um comando
+
+Uteis Find
+  find -> localizar arquivos e programas
+  find -name "log*" -> começa com log
+  find -name "*log" -> termina com log
+  find -name "*log" -> log em qualquer lugar
+  find -name "*log*" -name "*2017*" -> bucar todos arquivos com log E 2017
+  find -name "*log*" -o -name "*2017*" -> buscar todos arquivos com log OU 2017
+  find -name \("*log*" -o -name "*2017*"\) -a -name "7" -> -a = AND
+  find -name "*log*" ! -name "*2017*" -> buscar todos arquivos com log e não tenha 2017
+  find -inmae -> iginora maiuscula e minuscula
+  find -type d -name "*user*" -> busca somente diretorios
+  find -type f -name "*user*" -> busca somente arquivos
+  find -type l -name "*user*" -> busca somente links simbolicos
+  find -user marcoservio -> busca todos arquivos que o usuario é o dono
+  find -size +5000k -> busca arquivo pelo tamanho
+  find -atime -7 -> busca pela data de acesso
+  find -mtime -7 -> busca pela data de modificação do conteudo
+  find -ctime -7 -> busca pela da de motificação de qualquer alteração
+  find -inum 231413 -> busca pelo inode
+  find -name "*log*" -name "*2017*" -exec ls -l "{}" \; -> Executar um comando para cada um dos resultados do find
+  find -name "*log*" -name "*2017*" -exec rm -i "{}" \; -> Apaga cada arquivo que foi encontrado no find perguntando se realmente que ser apagado
+
+Uteis Le
+  ls -R -> Lista todos os diretorios e filho e filho dos filhos recursivamente
+  ls * -> Lista todos os arquivos entrando em um nivel de diretorios
+  ls -l -> Lista longa com todas informações
+  ls -a -> Lista todos os arquivos do diretorio incluindo ocultos=
+  ls -S -> Ordena pelo tamanho
+  ls -t -> Ordena pela data
+  ls -X -> Ordena pela extensão
+  ls -r -> Inverte a ordem da listagem
+  ls -d -> Lista de somente um diretorio especifico (ls -ld /bin)
+  ls -i -> Mostra para qual nó esta apontando os arquivos
+  ls -F -> Indica, visualmente, através de caracteres o que cada coisa que está na lista é
+  ls -p -> So indica visualmente os diretorios
+
+Uteis diretorios e arquivo
+  mkdir -> cria o ultimo diretorio
+  mkdir -p teste/2020/teste -> cria todos os diretorios forçado
+  mkdir -p teste/202{1,2,3,4,5}/teste{1,2,3,4} -> criar a sequencia completa com glob
+  rmdir -> remove um diretorio vazio
+  rmdir -p -> remove todos os diretorios vazios
+  rmdir -pv -> apaga todos os diretorios e mostra a mensagem de cada um que foi removido(Verbose)
+  touch -> cria arquivos ou atualiza ultima modificação do arquivo ja existente  
+  rm -> so apaga arquivo
+  cp teste.txt teste2.txt -> copia um arquivo para outro
+  cp -vu loja/* lojabkp/ -> copia so os arquivos novos e o que foi alterado e verboso
+  cp -i -> Pergunta se quer sobrescrever
+  cp -b -> sobrescrever o arquivo mas faz um bkp do arquivo antes 
+  cp -r -> copiar recursivamente de um diretorio para outro
+  cp -f -> força a copia 
+  mv -> move um arquivo ou diretorio, se não tiver um diretorio ou arquivos ele vai renomear
+  rm -rf -> remove recursivamente forçado
+
+Uteis compactação/arquivamento
+  tar -cf teste.tar * -> arquiva todos os arquivos para o teste.tar
+  tar -tvf teste.tar -> ler o arquivo tar
+  tar -xf teste.tar -> Extrair arquivo
+  tar -uf teste.tar -> Atualiza o arquivamento com arquivos que sofreram modificação
+  tar -czvf loja.tar.gz * -> Arquivar e compactar com gzip
+  tar -cjvf loja.tar.bz2 * Arquivar e compactar com bzip2
+  tar -xzvf loja.tar.gz -> descompactar
+  gzip -> compacta um unico arquivo
+  gunzip -> descompacta
+  gzip -d -> descompacta
+  gzip -l -> lista que ta compactado
+  gzip -1v -> Roda mais rapido menos compactado
+  gzip -9v -> Roda mais devagar mais compactado
+  gzip -c -> mostra no terminal(txt) o arquivo compactado
+  bzip2 -> compacta
+  bunzip2 -> descompacta
+  bzip2 -d -> descompacta
+  zip teste.zip teste -> compacta
+  unzip -l -> lista de arquivos dentro de um zip
+  unzip -> descompactar
+  unzip -q -> descompacta sem mostrar nenhuma mensagem 
+  unzip -d home/temp/ teste.zip -> descompacta em outro diretorio
+  unzip teste.zip teste/teste1 -> descompacta somente arquivos escolhidos 
+  zip -rv -> zipar recursivamente verbose
+  find . -name "*.html" | zip -@ teste.zip -> zipar o que o resultado do find o "-@" pega cada um arquivo do resultado do find
+
+Verifiando informações de CPU
+  cat /proc/cpuinfo | more
+
+Prompt de comando
+  top 
+  m -> memoria
+  L -> procurar palavra
+
+Localizar processos
+  ps -ef | grep apache
+  kill -9 numeroProcesso -> mata forçado o processo
+
+
+
+
+KALI LINUX
+
+Pos instalação do Kali Linux
+  passwd -> Troca senha usuario padrão
+  sudo passwd root -> Troca senha do usuario root
+  systemctl start systemd-resolved -> Problemas para acessar a internet -> enable para criar uma rotina
+  apt-get update
+  apt-get upgrade
+  apt-get dist-upgrade
+  apt-get install tmux -> Dividir terminal em varias abas
+  apt-get install git
+
+OWASP
+  http://190.109.64.218:8082/
+  http://192.168.100.72:8080/manager/html
+  <role rolename="manager"/>
+  <user username="tomcat" password="s3cret" roles="manager"/>
+
+Metasploit
+  msfdb init -> inicar o Metasploit
+  msfconsole -> abrir o Metasploit
+  db_status -> verificar status do banco
+  db_connect -h -> informações sobre o banco de dados
+  workspace -> lista workspaces
+  workspace -d -> remove
+  workspace -a Teste -> cria um workspace
+  db_nmap -sV 192.168.100.72 -> Verifica portas e programas disponiveis
+  db_nmap -Pn -p445 -script smb-os-discovery 192.168.100.72
+  search cve: 2017-0143  -> procurar por expoits 
+  use nome_do_exploit -> selecionar o exploit
+  set RHOSTS 192.168.100.72 -> configurar o host do alvo
+  run -> verificar se é vulneravel=
+  vulns -> mostra as vulnerabilidade
+  services -> serviços que podem ser executados
+  show options -> mostra as opções para o expoit
+  session -> mostra as sessoes
+
+Baixar paginas e projetos web
+  wget http://localhost:8080/bodgeit/ -> baixa uma pagina web em html
+  wget -r -P bodgeit_offline/ http://localhost:8080/bodgeit/ -> copiar toda o projeto web pastas, arquivos, imagens e etc.
+  httrack http://localhost:8080/bodgeit/ -> baixa todo o projeto web mais completo
+  
+Subir sites para teste de invasão
+  docker run --rm -p 3000:3000 bkimminich/juice-shop
+    admin@juice-sh.op
+    admin123
+  docker run --rm -p 8080:8080 securecodebox/bodgeit
+
+Interceptar  dados
+  Burp suit -> consegue interceptar tudo que que é feito no proxy
+  Zap
+    abri o programa
+    mudar proxy do navegador para 127.0.0.1 8080
+    localhost:8080 -> baixar arquivo de certificado para https e importar no navegador
+    ja vai estar monitorando os acessos aos sites
+
+Varias requisições em uma pagina
+  while :; do curl -l http://172.31.86.127; done;
+
+Instalando tor e tor Browser
+  sudo apt install -y tor torbrowser-launcher
+  torbrowser-launcher
+
+Instalação Adicionais Convidado
+  apt-cache search virtualbox-guest
+  apt install virtualbox-guest-*
+
+Instalação Google Ghrome
+  dpkg -i google-chrome-stable_current_amd64.deb
+  apt install -f -> Caso de algum erro de pacotes.
+  
+Escrita ao logar com root(figlet)
+  apt install figlet
+  vim ~/.zshrc
+  Ir no final do arquivo e inserir -> figlet "Nome"
+  
+Configurar acesso ssh
+  vim /etc/ssh/sshd_config
+  descomentar PermirRootLogin e colocar na frente yes
+  systemctl start ssh
+  systemctl enable ssh
+  netstat -tpan | grep 22 -> verificar se a porta 22 está aberta
+  
+Nessus
+  Baixar
+  dpkg -i Nessus-10.1.2-debian6_amd64.deb -> Instalar
+  /bin/systemctl start nessusd.service -> ativar nessus
+  https://192.168.1.13:8834/ -> acessar
+  
+Docker
+  Instalar
+  systemctl start docker
+  systemctl enable docker -> sempre abilitado
+  sudo usermod -aG docker $USER -> permitar acesso a outros usuarios
+  securecodebox/bodgeit -> site treinamento
+    docker pull securecodebox/bodgeit
+    docker run -it --rm -p 8080:8080 securecodebox/bodgeit
+    http://192.168.1.13:8080/bodgeit/
+  bkimminich/juice-shop -> site treinamento
+    docker pull bkimminich/juice-shop
+    docker run -it --rm -p 3000:3000 securecodebox/bodgeit
+    http://192.168.1.13:3000
+
+Colhendo informações
+  Verificar serviços e portas aberta
+    nmap -sP 192.168.100.39 -> Informações da maquina
+    nmap -sV 192.168.100.39 -> Serviço
+
+  Usando a força bruta para quebrar a senha de algum servidor
+    wpscan --url 192.168.100.73 --passwords /root/worldlist.txt -> worldlist são todas as senhas para testar
+    
+  cd /home/kali
+  cd goofuzz
+  ./GooFuzz -t site -e arquivos a ser procurado esta na pasta world list
+  sslscan 192.168.100.72 
+  sslyze 192.168.100.72
+  nikto -h 192.168.100.72  
+  
+  GVM
+    user: admin
+    senha: 7292ff8b-ecc8-4b46-99a3-79cbda029a4a
+    gvm-start 
