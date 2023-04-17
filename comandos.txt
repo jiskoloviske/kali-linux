@@ -28,7 +28,7 @@ Comando uteis
   canal 0 (<) -> canal de entrada
   canal 1 (>)-> canal saida padrão
   canal 2 (>)-> canal saida de erro
-  | -> redirenciona pra outro comando
+  | -> redirenciona pra outro comandos
 
 Visualizar arquviso 
   wc arquivo.txt -> Mostra numero de bits, numero de linhas, numero de palavra
