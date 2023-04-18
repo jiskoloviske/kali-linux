@@ -29,6 +29,24 @@ Comando uteis
   canal 1 (>)-> canal saida padrão
   canal 2 (>)-> canal saida de erro
   | -> redirenciona pra outro comandos
+  type -> verifica o tipo do arquivo
+
+Uteis GREP
+  grep -> busca uma expressão dentro de um arquivo
+  grep -n -> buscar um expressão e mostra o numero da linha
+  grep -c -> conta o numero de linhas onde tem essa ocorrencia
+  grep -i -> ignora se é maiusculo ou minusculo
+  grep '201[0-9]' -> busca no arquivo por expressão regular 2010 ate 2019
+  grep '201[[:digit:]]' -> buscar de 0 a 9
+  grep '201[[:alnum]]' -> buscar de 0 ate 9, a ate z maiusculo e minusculo
+  grep '[[:digit]]\+,[[:digit:]]\+' -> mostra pelo menos 1 resultado ou mais de um com o '+'
+  grep '[[:digit]]\+,\?[[:digit:]]\+' -> 1 ou mais digitos, tem virgula ou não, 1 ou mais digitos
+  grep '[[:digit:]]*' -> zero ou mais resultados
+  grep '[[:punct:]] -> arquivos com pontuacao
+  grep '[,\.]' -> ou uma virgula ou um ponto
+  \ -> para escapar e o shell não interpretar
+  grep -v -> inverter a busca
+  grep -r -> busca em todos os arquivos do diretorio
 
 Uteis CUT
   começa na posição 1
