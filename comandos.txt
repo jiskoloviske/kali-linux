@@ -31,7 +31,7 @@ Comando uteis
   | -> redirenciona pra outro comandos
   type -> verifica o tipo do arquivo
 
-Uteis SCRIPTS
+Uteis SCRIPT
   #!/bin/bash -> sempre usar isso no começo do script para ser executado com o bash sempre (shebang)
   echo 'diretorio' `pwd` -> resultado da execução do pwd como argumento para echo
   $(pwd) -> resultado do pwd em outro comando
