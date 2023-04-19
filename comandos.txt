@@ -4,7 +4,8 @@ shift + g vai no final do arquivo com o "vim"
 remover bloqueio de tela por inatividade (opções de energia)
 clear -> limpa a tela
 exit -> sai do usuario atual
-shoutdown -> desligar o pc
+shutdown -P -> desligar o pc
+shutdown -r -> reinicia o pc
 
 Comando uteis
   ip s a -> mostra o ip
