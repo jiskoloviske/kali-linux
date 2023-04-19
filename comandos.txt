@@ -4,7 +4,8 @@ shift + g vai no final do arquivo com o "vim"
 remover bloqueio de tela por inatividade (opções de energia)
 clear -> limpa a tela
 exit -> sai do usuario atual
-shutdown -P -> desligar o pc
+shutdown now -> desligar o pc agora
+shutdown -P -> desligar o pc com um tempo
 shutdown -r -> reinicia o pc
 
 Comando uteis
