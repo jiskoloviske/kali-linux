@@ -35,6 +35,7 @@ Comando uteis
   type -> verifica o tipo do arquivo
 
 Uteis SCRIPT
+  ver mais exemplos na pasta scripts
   #!/bin/bash -> sempre usar isso no começo do script para ser executado com o bash sempre (shebang)
   echo 'diretorio' `pwd` -> resultado da execução do pwd como argumento para echo
   $(pwd) -> resultado do pwd em outro comando
@@ -46,7 +47,10 @@ Uteis SCRIPT
   $# -> numero de argumentos passados
   $* -> mostra todos os argumentos passados
   '' -> aspas simples não interpretam varivais no script
-
+  for ano in $*
+  do
+    faça algo
+  done
 
 Uteis GREP
   grep -> busca uma expressão dentro de um arquivo
