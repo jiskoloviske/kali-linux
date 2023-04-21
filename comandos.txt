@@ -34,6 +34,62 @@ Comando uteis
   | -> redirenciona pra outro comandos
   type -> verifica o tipo do arquivo
 
+UTEIS VIM
+  vim nome_arquivo -> edita o arquivo e ou cria se não tiver
+  home/.vimrc -> altera configurações do vim
+  .vimrc ex
+    execut pathogen#infect(e)
+    set tabstop=2
+    filetype plugin indent on
+    syntax on
+    set shiftwidth=2
+    set backspace=2
+  colorscheme industry -> muda a cor do vim
+  dd -> apaga linha
+  :q! -> sai forçado do editor
+  :q -> sai normal
+  :x -> salva e sai
+  :w -> salva
+  :wq -> salva e fecha
+  i -> insert mode
+  esc -> volta para o modo normal
+  / -> procura por texto dentro do arquivo; n -> pula proximo resultado; shift n -> volta resultado anterior
+  j -> pra baixo -> 10j -> pula 10 linhas pra baixo seve como qualquer numero e para k, l, h
+  k -> pra cima
+  l -> direita
+  h -> esquerda
+  u -> desfaz alteração
+  ctrl + R -> refaz alteração
+  o -> cria uma linha em baixo entra no modo de inserção e ja identa
+  shift + o -> cria uma linha acima
+  y -> copia
+  p -> cola
+  x -> deleta um caractere
+  v -> seleciona um caractere
+  r -> replace um caractere
+  shift + v -> modo de seleção de linha
+  crtl + v -> modo de seleção de bloco
+  == -> identa a linha corretamente
+  {shift + v} seleciona a linha depois {x} recorta depois sobre pra linha que quer colar {p} ele cola uma linha abaixo
+  %s/ul/nav/gc -> subistitui todos as ocorrencia de ul para nav no arquivo todo(g) escolhendo sim ou não(c)
+  %s/<li>//gc -> subistitui por nada
+  %s/<\/li>//gc -> \ escapa caracteres especiais
+  gg -> volta pro começo de arquivo
+  shift + g -> final do arquivo
+  vs caminho_arquivo -> abre arquivos um do lado do outro
+  sp caminho_arquivo -> abre arquivos um de baixo do outro
+  crtl + w + w -> muda pro outro arquivo
+  crtl + w + h -> muda pro arquivo da esquerda
+  crtl + w + l -> muda pro arquivo da direita
+  Instlar plugns
+    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+    depois é so pegar o plugn escolhido e dar um clone do git na basta bundle
+    git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
+    para usar :NERDTree
+  NERDTree
+    s -> abre o arquivo um do lado do outro
+
 Uteis SCRIPT
   ver mais exemplos na pasta scripts
   #!/bin/bash -> sempre usar isso no começo do script para ser executado com o bash sempre (shebang)
