@@ -8,6 +8,22 @@ shutdown now -> desligar o pc agora
 shutdown -P -> desligar o pc com um tempo
 shutdown -r -> reinicia o pc
 
+Uteis Partição
+  lsblk -> mostra os discos
+  sudo fdisk /dev/sdb
+  n -> nova particão
+  p -> primaria
+  enter -> manter opção padrão
+  enter -> manter opção padrão
+  enter -> manter opção padrão
+  w -> salvar
+  Definir um sistema de arquivo
+    sudo mkfs -t ext4 /dev/sdb1 
+    sudo mkfs -t fat32 /dev/sdb1 -> para windows e linux
+  sudo mkdir secundario
+  sudo mount /dev/sdb1 /mnt/secundario
+  sudo umount /mnt/secundario
+
 Comando uteis
   ip s a -> mostra o ip
   ifconfig -> motra o ip
