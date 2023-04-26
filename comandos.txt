@@ -90,12 +90,16 @@ UTEIS VIM
   l -> direita
   h -> esquerda
   u -> desfaz alteração
+  w -> pula palavra por palavra
   ctrl + R -> refaz alteração
   o -> cria uma linha em baixo entra no modo de inserção e ja identa
   shift + o -> cria uma linha acima
   y -> copia
   p -> cola
   x -> deleta um caractere atual
+  q + qualquer_letra -> grava uma sequencia de comandos em uma letra 
+  q -> para de gravar
+  @ + q -> executa a gravação
   shift + x -> deleta o caractere anterior
   v -> seleciona um caractere
   r -> replace um caractere
