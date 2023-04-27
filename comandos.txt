@@ -90,7 +90,8 @@ UTEIS VIM
   l -> direita
   h -> esquerda
   u -> desfaz alteração
-  w -> pula palavra por palavra
+  w -> pula palavra por palavra pra frente
+  b -> pula palavra por palavra pra tras
   ctrl + R -> refaz alteração
   o -> cria uma linha em baixo entra no modo de inserção e ja identa
   shift + o -> cria uma linha acima
@@ -107,6 +108,7 @@ UTEIS VIM
   shift + i -> vai para o começo da linha e abre modo de edição
   shift + v -> modo de seleção de linha
   crtl + v -> modo de seleção de bloco
+  crtl + n -> mostra um altocomplete de palavras usadas
   == -> identa a linha corretamente
   {shift + v} seleciona a linha depois {x} recorta depois sobre pra linha que quer colar {p} ele cola uma linha abaixo
   %s/ul/nav/gc -> subistitui todos as ocorrencia de ul para nav no arquivo todo(g) escolhendo sim ou não(c)
@@ -127,6 +129,15 @@ UTEIS VIM
     para usar :NERDTree
   NERDTree
     s -> abre o arquivo um do lado do outro
+      crtl + w + w -> muda pro outro arquivo
+      crtl + w + h -> muda pro arquivo da esquerda
+      crtl + w + l -> muda pro arquivo da direita
+    t -> abre o arquivo em aba
+      g + t -> passa de uma aba pra outra
+      1 + g + 1 -> vai pra aba um e assim por diante
+  Emmet -> criar varios comandos html
+    div.container.panel-group>div.panel.panel-default*10>div.panel-heading+div.panel-body
+    , + , -> executa o comando acima
 
 Uteis SCRIPT
   ver mais exemplos na pasta scripts
