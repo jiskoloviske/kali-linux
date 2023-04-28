@@ -520,6 +520,10 @@ Colhendo informações
     senha: 7292ff8b-ecc8-4b46-99a3-79cbda029a4a
     gvm-start
 
+  DMITRY
+    dmitry -p 192.168.100.72 -> lista todas as portas
+    dmitry -pb 192.168.100.72 -> mostras a portas e as versões do serviços(Banner)
+
   Google Hacking
     "Intitle"
     Exemplo: “intitle: senhas”.
