@@ -114,6 +114,12 @@ UTEIS VIM
   %s/ul/nav/gc -> subistitui todos as ocorrencia de ul para nav no arquivo todo(g) escolhendo sim ou não(c)
   %s/<li>//gc -> subistitui por nada
   %s/<\/li>//gc -> \ escapa caracteres especiais
+  %s/figura-\(\d\)-depoimentos/figure-\1-testimonies/gc -> \d -> qualuer numero (esta () para pegar cada resultado e armazenar e usar depois no 1)
+  %s/figura-"\(.\{-}\)"-depoimentos/figure-"\1"-testimonies/gc
+    . -> pegar alque caractere
+    \{-} -> pega ate o a proxima aspas
+    \( \) -> armazena os valores pra usar depois
+    \1 -> usa o que foi salvo 1 é porque so tem um () se tivesse outro ia usar o 2 e assim por diante
   gg -> volta pro começo de arquivo
   shift + g -> final do arquivo
   vs caminho_arquivo -> abre arquivos um do lado do outro
