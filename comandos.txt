@@ -505,6 +505,7 @@ Colhendo informações
   Verificar serviços e portas aberta
     nmap -sP 192.168.100.39 -> Informações da maquina
     nmap -sV 192.168.100.39 -> Serviço
+    amap 192.168.100.36 1-100 -qb -> Mostra portas abertas de 1 a 100 
 
   Usando a força bruta para quebrar a senha de algum servidor
     wpscan --url 192.168.100.73 --passwords /root/worldlist.txt -> worldlist são todas as senhas para testar
