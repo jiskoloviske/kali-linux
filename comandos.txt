@@ -7,6 +7,7 @@ exit -> sai do usuario atual
 shutdown now -> desligar o pc agora
 shutdown -P -> desligar o pc com um tempo
 shutdown -r -> reinicia o pc
+scp -r diretorio usuario@ip_maquina:~ -> copiar de uma maquina linux pra outra
 
 Uteis Partição
   lsblk -> mostra os discos
