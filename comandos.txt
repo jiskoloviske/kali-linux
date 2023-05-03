@@ -529,6 +529,10 @@ Colhendo informações
     dmitry -p 192.168.100.72 -> lista todas as portas
     dmitry -pb 192.168.100.72 -> mostras a portas e as versões do serviços(Banner)
 
+  DDOS
+    apt install iptraf-ng -> monitorador de pacotes
+    hping3
+
   Google Hacking
     "Intitle"
     Exemplo: “intitle: senhas”.
