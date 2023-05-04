@@ -8,6 +8,8 @@ shutdown now -> desligar o pc agora
 shutdown -P -> desligar o pc com um tempo
 shutdown -r -> reinicia o pc
 scp -r diretorio usuario@ip_maquina:~ -> copiar de uma maquina linux pra outra
+crtl + z -> para a execução do um programa
+fg -> volta com o program parado
 
 Uteis Partição
   lsblk -> mostra os discos
@@ -314,8 +316,11 @@ Verifiando informações de CPU
 
 Prompt de comando
   top 
+  z -> muda a cor
+  shift + z -> escolhe o esquema de cores
   m -> memoria
   L -> procurar palavra
+  free -h -> mostra informações sobre a memoria
 
 Localizar processos
   ps -ef | grep apache
