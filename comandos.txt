@@ -341,6 +341,16 @@ Pos instalação do Kali Linux
   apt-get install tmux -> Dividir terminal em varias abas
   apt-get install git
 
+ALTERAR MACADRESS
+  macchanger -h
+  macchanger -s wlan0
+  ifconfig wlan0 down
+  macchanger -r wlan0 -> mac randomica
+    macchanger --mac endereco_mac wlan0
+  macchanger -s wlan0
+  ifconfig wlan0 up
+  macchanger -p wlan0 -> volta pro original mas tem que fazer os passo a cima desligar e etc
+
 OWASP
   http://190.109.64.218:8082/
   http://192.168.100.72:8080/manager/html
