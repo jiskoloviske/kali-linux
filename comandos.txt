@@ -326,6 +326,11 @@ Localizar processos
   ps -ef | grep apache
   kill -9 numeroProcesso -> mata forçado o processo
 
+NETSTAT
+  netstat -h -> adjuda
+  netstat -tlpn -> portas TCP + portas escutando + processos + numero das portas
+  netstat -ulpn -> portas UDP + portas escutando + processos + numero das portas
+  netstat -s -> estatisticas
 
 
 
