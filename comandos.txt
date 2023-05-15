@@ -22,6 +22,22 @@ Uteis Criação Usuario
   vipw -S -> edita o shadown
   su marco -> entra em outro usuario
 
+Uteis Permissão
+  d -> diretorio
+  r -> leitura
+  w -> escrita
+  x -> execução
+  - permissao de escrita em arquivo altera o conteudo do arquivo
+  - permissao de escrita em diretorio permite apagar e criar outros arquivos
+  chmod +w nome_arquivo -> da permissão de escrita para o arquivo proprio usuario
+  chmod u+w nome_arquivo -> da permissão de escrita para o proprio usuario 
+  chmod o+w nome_arquivo -> da permissão de escrita para o outros usuario 
+  chmod o-rw nome_arquivo -> tira a permissão do escrita e leitura do outros usuarios
+  chmod o-w * -> tira permissao de escrita de todos os arqvuios para outros usuarios
+  chmod -R o+w Documents -> da permissão para todos os arquivos dentro da pasta (recursivamente)
+  chown usuario arquivo (sudo chwon paulo program.c) -> troca o dono do arquivo ou diretorio
+  chown -R usuario diretorio (sudo chwon -R paulo documents) -> troca o dono do diretorio e dos arquivos dentro dele (recursivamente)
+
 Uteis Partição
   lsblk -> mostra os discos
   sudo fdisk /dev/sdb
