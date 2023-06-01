@@ -620,6 +620,10 @@ Colhendo informações
     service start tor
     proxychains ./goldeneye.py http://www.talismanonlinebrasil.com.br/
 
+  John
+    unshadow /etc/passwd /etc/shadow > /root/johns_passwdnshadow
+    john --wordlist=/usr/share/john/password.lst --format=crypt /root/johns_passwd -> quebar a senha dos usuarios do linux
+    john --show /root/johns_passwd  -> mostrar a senhas quebradas
 
   Google Hacking
     "Intitle"
